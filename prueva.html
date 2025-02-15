@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos en Horizontal</title>
+    <style>
+        .video {
+            display: flex;
+            /* Alinea los videos en fila */
+            justify-content: center;
+            /* Centra los videos en la pantalla */
+            gap: 10px;
+            /* Espaciado entre videos */
+        }
+
+        video {
+            width: 30%;
+            /* Ajusta el tamaño de los videos */
+            max-width: 300px;
+            /* Máximo ancho */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="video">
+        <video controls>
+            <source src="itachi.mp4" type="video/mp4">
+        </video>
+        <video controls>
+            <source src="itachi.mp4" type="video/mp4">
+        </video>
+        <video controls>
+            <source src="itachi.mp4" type="video/mp4">
+        </video>
+    </div>
+
+</body>
+
+</html>

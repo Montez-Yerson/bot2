@@ -82,3 +82,18 @@ section button{
      font-size: 1em;
 
 }
+video {
+    display: flex;
+    /* Alinea los videos en fila */
+    justify-content: center;
+    /* Centra los videos en la pantalla */
+    gap: 10px;
+    /* Espaciado entre videos */
+}
+
+video {
+    width: 30%;
+    /* Ajusta el tamaño de los videos */
+    max-width: 300px;
+    /* Máximo ancho */
+}
