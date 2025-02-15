@@ -152,29 +152,53 @@
             /* Alinea los videos en fila */
             justify-content: center;
             /* Centra los videos en la pantalla */
-            gap: 10px;
+            gap: 0px;
             /* Espaciado entre videos */
         }
     
         video {
-            width: 30%;
-            /* Ajusta el tamaño de los videos */
-            max-width: 300px;
-            /* Máximo ancho */
+        width: 250px; /* Tamaño fijo para uniformidad */
+        height: 400px; /* Altura fija para que sean iguales */
+        object-fit: cover; /* Asegura que el video llene el espacio sin dis*/
         }
     </style>
 
     <div class="video">
-        <video controls>
+        <video id="video1" muted>
             <source src="lufy.mp4" type="video/mp4">
         </video>
-        <video controls>
+        <video id="video2" muted>
             <source src="naruto.mp4" type="video/mp4">
         </video>
-        <video controls>
+        <video id="video3" muted>
             <source src="goku.mp4" type="video/mp4">
         </video>
     </div>
+    <script>
+        const videos = [
+            document.getElementById("video1"),
+            document.getElementById("video2"),
+            document.getElementById("video3")
+        ];
+
+        let index = 0;
+
+        function playNextVideo() {
+            if (index < videos.length) {
+                let currentVideo = videos[index];
+                currentVideo.play();
+                currentVideo.onended = () => {
+                    index++;
+                    playNextVideo();
+                };
+            }
+        }
+
+        // Iniciar la reproducción secuencial automáticamente
+        window.onload = () => {
+            playNextVideo();
+        };
+    </script>
 
     <div class="copy">
         <b><center>©Copyright 2023 </b> Todos los derechos reservados 2023</center></b>
