@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos de Fondo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: black;
+            position: relative;
+        }
+
+        .video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+
+        .video-container video {
+            width: 33.33%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay-text {
+            position: absolute;
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+            text-align: center;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="video-container">
+        <video src="naruto.mp4" autoplay loop muted></video>
+        <video src="goku2.mp4" autoplay loop muted></video>
+        <video src="lufy.mp4" autoplay loop muted></video>
+    </div>
+    <div class="overlay-text">hola mundo</div>
+</body>
+
+</html>

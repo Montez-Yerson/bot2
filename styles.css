@@ -5,17 +5,7 @@
     --transition: all 0.1s cubic-bezier(0.645,0.355,1)
 }
 
-
-*{
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box; 
-}
-
-body{
-    font: var(--font-mono);
-}
-section{
+*section{
     display: flex;
     flex-wrap: wrap;
     height: 100vh;
